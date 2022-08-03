@@ -1,0 +1,47 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": ["next/core-web-vitals", "airbnb", "prettier"],
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "requireConfigFile": false,
+    "babelOptions": {
+      "presets": ["@babel/preset-react"]
+    },
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "prettier", "simple-import-sort"],
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [["~", "."]],
+        "extensions": [".js", ".jsx"]
+      }
+    }
+  },
+  "rules": {
+    "react/jsx-handler-names": "warn",
+    "react/jsx-pascal-case": "warn",
+    "react/react-in-jsx-scope": "off",
+    "react/state-in-constructor": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/prop-types": 0,
+    "react/jsx-props-no-spreading": "off",
+    "default-param-last": "off",
+    "import/prefer-default-export": "off",
+    "import/extensions": ["error", "always", { "js": "never", "jsx": "never" }],
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "sort-imports": "off",
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error"
+  }
+}
